@@ -1,0 +1,12 @@
+0.7
+2020.2
+Nov 14 2025
+19:37:27
+D:/Programare/SystemVerilog/Simulare1_TEST1/Simulare1_TEST1.sim/sim_1/behav/xsim/glbl.v,1756381829,verilog,,,,glbl,,uvm,,,,,,
+D:/Programare/SystemVerilog/Simulare1_TEST1/Simulare1_TEST1.srcs/sources_1/new/DEMUX4.sv,1774646054,systemVerilog,,D:/Programare/SystemVerilog/Simulare1_TEST1/Simulare1_TEST1.srcs/sources_1/new/MUX2.sv,,DEMUX4,,uvm,../../../../../../Vivado/2025.2/Vivado/data/rsb/busdef,,,,,
+D:/Programare/SystemVerilog/Simulare1_TEST1/Simulare1_TEST1.srcs/sources_1/new/MUX2.sv,1774645409,systemVerilog,,D:/Programare/SystemVerilog/Simulare1_TEST1/Simulare1_TEST1.srcs/sources_1/new/MUX22.sv,,MUX2,,uvm,../../../../../../Vivado/2025.2/Vivado/data/rsb/busdef,,,,,
+D:/Programare/SystemVerilog/Simulare1_TEST1/Simulare1_TEST1.srcs/sources_1/new/MUX22.sv,1774646136,systemVerilog,,D:/Programare/SystemVerilog/Simulare1_TEST1/Simulare1_TEST1.srcs/sources_1/new/MUX4.sv,,MUX22,,uvm,../../../../../../Vivado/2025.2/Vivado/data/rsb/busdef,,,,,
+D:/Programare/SystemVerilog/Simulare1_TEST1/Simulare1_TEST1.srcs/sources_1/new/MUX4.sv,1774645694,systemVerilog,,D:/Programare/SystemVerilog/Simulare1_TEST1/Simulare1_TEST1.srcs/sources_1/new/paritycalc.sv,,MUX4,,uvm,../../../../../../Vivado/2025.2/Vivado/data/rsb/busdef,,,,,
+D:/Programare/SystemVerilog/Simulare1_TEST1/Simulare1_TEST1.srcs/sources_1/new/paritycalc.sv,1774646317,systemVerilog,,D:/Programare/SystemVerilog/Simulare1_TEST1/Simulare1_TEST1.srcs/sources_1/new/top.sv,,paritycalc,,uvm,../../../../../../Vivado/2025.2/Vivado/data/rsb/busdef,,,,,
+D:/Programare/SystemVerilog/Simulare1_TEST1/Simulare1_TEST1.srcs/sources_1/new/tb.sv,1774647940,systemVerilog,,,,tb,,uvm,../../../../../../Vivado/2025.2/Vivado/data/rsb/busdef,,,,,
+D:/Programare/SystemVerilog/Simulare1_TEST1/Simulare1_TEST1.srcs/sources_1/new/top.sv,1774648418,systemVerilog,,D:/Programare/SystemVerilog/Simulare1_TEST1/Simulare1_TEST1.srcs/sources_1/new/tb.sv,,top,,uvm,../../../../../../Vivado/2025.2/Vivado/data/rsb/busdef,,,,,

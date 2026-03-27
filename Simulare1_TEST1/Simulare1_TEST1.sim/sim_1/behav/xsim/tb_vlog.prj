@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../../../Vivado/2025.2/Vivado/data/rsb/busdef" \
+"../../../../Simulare1_TEST1.srcs/sources_1/new/DEMUX4.sv" \
+"../../../../Simulare1_TEST1.srcs/sources_1/new/MUX2.sv" \
+"../../../../Simulare1_TEST1.srcs/sources_1/new/MUX22.sv" \
+"../../../../Simulare1_TEST1.srcs/sources_1/new/MUX4.sv" \
+"../../../../Simulare1_TEST1.srcs/sources_1/new/paritycalc.sv" \
+"../../../../Simulare1_TEST1.srcs/sources_1/new/top.sv" \
+"../../../../Simulare1_TEST1.srcs/sources_1/new/tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
