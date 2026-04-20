@@ -1,0 +1,135 @@
+PLANIFICAREA ETAPELOR DE DEZVOLTARE A PROIECTULUI
+
+Titlul proiectului:
+Sistem video pe FPGA cu afisare VGA si mecanica de joc de tip "Arcasul si balonul"
+
+
+1. Introducere
+
+Proiectul urmareste realizarea unui sistem digital implementat pe FPGA, capabil sa
+genereze semnal video VGA si sa ruleze o logica simplificata de joc. Arhitectura
+include un procesor minimal, memorie de instructiuni, memorie video de tip VRAM,
+interfata pentru butoane, afisaj cu 7 segmente si un modul de sincronizare video.
+
+In stadiul actual, infrastructura hardware de baza este prezenta, iar sistemul poate
+afisa un obiect grafic si poate raspunde la comenzi de intrare. Pentru finalizarea
+proiectului sunt necesare mai multe etape de integrare, validare si rafinare.
+
+
+2. Obiectiv general
+
+Obiectivul final consta in obtinerea unui joc functional pe iesire VGA, in care
+utilizatorul controleaza un arcas, poate lansa o sageata, interactioneaza cu un
+balon aflat in miscare, iar scorul este afisat in timp real.
+
+
+3. Etapele de realizare
+
+3.1. Etapa I - Stabilizarea subsistemului VGA
+
+Obiectiv:
+Asigurarea functionarii corecte si stabile a lantului de afisare VGA.
+
+Activitati necesare:
+1. Verificarea parametrilor temporali ai modulului de sincronizare VGA.
+2. Validarea semnalelor de sincronizare orizontala si verticala.
+3. Confirmarea corespondentei dintre coordonatele generate video si adresele din VRAM.
+4. Testarea afisarii corecte a unui obiect grafic simplu pe ecran.
+5. Corectarea eventualelor probleme de flicker, tearing sau instabilitate video.
+6. Testarea functionarii pe placa FPGA si pe monitorul tinta.
+
+Rezultat asteptat:
+Afisare stabila a imaginii pe monitor si randare corecta a obiectelor grafice de baza.
+
+
+3.2. Etapa II - Implementarea mecanicii minimale de joc
+
+Obiectiv:
+Dezvoltarea unei versiuni functionale minimale a jocului.
+
+Activitati necesare:
+1. Definitivarea programului activ din memoria de instructiuni.
+2. Implementarea miscarii arcasului pe axa verticala.
+3. Implementarea lansarii si deplasarii sagetii.
+4. Implementarea logicii de aparitie si miscare pentru balon.
+5. Implementarea operatiei de stergere si redesenare a obiectelor.
+6. Implementarea detectiei de coliziune intre sageata si balon.
+7. Actualizarea scorului in functie de evenimentele de joc.
+8. Afisarea scorului pe display-ul cu 7 segmente.
+
+Rezultat asteptat:
+Un joc simplu, dar complet functional, in care utilizatorul poate interactiona cu
+obiectele afisate si poate acumula puncte.
+
+
+3.3. Etapa III - Sincronizarea logica-video si optimizarea executiei
+
+Obiectiv:
+Corelarea actualizarii logicii de joc cu ritmul de afisare video.
+
+Activitati necesare:
+1. Utilizarea semnalului de sincronizare verticala pentru actualizarea controlata a jocului.
+2. Stabilirea unei secvente clare de operatii:
+   stergere, actualizare stare, redesenare.
+3. Reglarea vitezei de deplasare a obiectelor in functie de frame-uri.
+4. Reducerea efectelor vizuale nedorite generate de scrierea asincrona in VRAM.
+5. Validarea functionarii sistemului la rulare continua.
+
+Rezultat asteptat:
+Un comportament fluid, coerent si predictibil al jocului, sincronizat cu afisarea.
+
+
+3.4. Etapa IV - Testare functionala si validare experimentala
+
+Obiectiv:
+Demonstratea corectitudinii functionale a principalelor module hardware.
+
+Activitati necesare:
+1. Extinderea testbench-urilor existente pentru unitatea CPU.
+2. Realizarea de scenarii de test pentru modulul VRAM dual-port.
+3. Realizarea de scenarii de test pentru generatorul VGA.
+4. Verificarea integrarii la nivel de top module.
+5. Testarea cazurilor limita:
+   margini ecran, reset, lipsa intrare, coliziuni multiple.
+6. Compararea rezultatelor obtinute in simulare cu cele observate pe placa.
+
+Rezultat asteptat:
+Existenta unui set minim de dovezi experimentale care confirma functionarea corecta
+a subsistemelor proiectului.
+
+
+3.5. Etapa V - Finalizare, documentare si pregatire pentru prezentare
+
+Obiectiv:
+Pregatirea proiectului pentru predare, sustinere sau demonstratie publica.
+
+Activitati necesare:
+1. Curatarea fisierelor sursa de versiuni intermediare si blocuri comentate inutile.
+2. Organizarea clara a codului si a modulelor.
+3. Eliminarea mesajelor de debug care nu mai sunt necesare.
+4. Actualizarea documentatiei tehnice a proiectului.
+5. Descrierea arhitecturii hardware si a fluxului de date.
+6. Descrierea modului de rulare in Vivado si a modului de programare a placii.
+7. Redactarea concluziilor si a limitarilor actuale ale sistemului.
+
+Rezultat asteptat:
+Un proiect complet, bine structurat, usor de explicat si pregatit pentru evaluare.
+
+
+4. Ordinea recomandata de implementare
+
+Pentru eficienta dezvoltarii, se recomanda urmatoarea succesiune:
+1. Stabilizarea subsistemului VGA.
+2. Implementarea mecanicii minimale de joc.
+3. Sincronizarea logica-video.
+4. Testarea si validarea functionala.
+5. Curatarea finala si redactarea documentatiei.
+
+
+5. Concluzie
+
+Finalizarea proiectului presupune trecerea de la o demonstratie hardware functionala
+la un sistem integrat complet, capabil sa combine generarea de imagine, procesarea
+comenzilor utilizatorului si logica de joc intr-o implementare coerenta pe FPGA.
+Parcurgerea etapelor prezentate va conduce la obtinerea unei aplicatii video
+interactive stabile si prezentabile din punct de vedere tehnic.

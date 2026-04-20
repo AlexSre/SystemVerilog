@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top_Game_NexysA7
+INFO: [VRFC 10-311] analyzing module CPU_17bit
+INFO: [VRFC 10-311] analyzing module PMEM_26bit
+INFO: [VRFC 10-311] analyzing module VRAM_DualPort
+INFO: [VRFC 10-311] analyzing module vga_sync_1440x900
+INFO: [VRFC 10-311] analyzing module SevenSeg_Driver
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_CPU_ALU
+INFO: [VRFC 10-311] analyzing module tb_Memory_Test
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

@@ -1,0 +1,9 @@
+0.7
+2020.2
+Nov 14 2025
+19:37:27
+D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.sim/sim_1/behav/xsim/glbl.v,1756381829,verilog,,,,glbl,,uvm,,,,,,
+D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/config.vh,1768894345,verilog,,,,,,,,,,,,
+D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv,1768894345,systemVerilog,,D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/tb.sv,D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/isa.vh;D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/config.vh,CPU_17bit;PMEM_26bit;SevenSeg_Driver;Top_Game_NexysA7;VRAM_DualPort;vga_sync_1440x900,,uvm,../../../../../../../../Vivado/2025.2/Vivado/data/rsb/busdef;../../../../ComputerArcasulVideoIO.srcs/sources_1/new,,,,,
+D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/isa.vh,1768894345,verilog,,,,,,,,,,,,
+D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/tb.sv,1768894345,systemVerilog,,,D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/isa.vh,tb_CPU_ALU;tb_Memory_Test,,uvm,../../../../../../../../Vivado/2025.2/Vivado/data/rsb/busdef;../../../../ComputerArcasulVideoIO.srcs/sources_1/new,,,,,

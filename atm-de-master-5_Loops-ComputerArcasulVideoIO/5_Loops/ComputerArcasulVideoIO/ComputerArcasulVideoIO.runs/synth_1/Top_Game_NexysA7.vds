@@ -1,0 +1,404 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Apr 17 00:29:02 2026
+# Process ID         : 30568
+# Current directory  : D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.runs/synth_1
+# Command line       : vivado.exe -log Top_Game_NexysA7.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Game_NexysA7.tcl
+# Log file           : D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.runs/synth_1/Top_Game_NexysA7.vds
+# Journal file       : D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.runs/synth_1\vivado.jou
+# Running On         : DESKTOP-9HCBKN4
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : AMD Ryzen 7 5800H with Radeon Graphics         
+# CPU Frequency      : 3194 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16558 MB
+# Swap memory        : 8826 MB
+# Total Virtual      : 25384 MB
+# Available Virtual  : 4476 MB
+#-----------------------------------------------------------
+source Top_Game_NexysA7.tcl -notrace
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 555.809 ; gain = 221.523
+Command: synth_design -top Top_Game_NexysA7 -part xc7a50tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a50t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a50t'
+INFO: [Device 21-403] Loading part xc7a50tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 5900
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1285.551 ; gain = 539.676
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'vram_init_done', assumed default net type 'wire' [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:98]
+WARNING: [Synth 8-8895] 'vram_init_done' is already implicitly declared on line 98 [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:128]
+INFO: [Synth 8-6157] synthesizing module 'Top_Game_NexysA7' [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_BASE' [D:/Programare/Vivado/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95964]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 1.000000e+01 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 1.000000e+01 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 4.000000e+01 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 5.000000e-01 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000e+00 - type: double 
+	Parameter CLKOUT1_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_BASE' (0#1) [D:/Programare/Vivado/2025.2/Vivado/scripts/rt/data/unisim_comp.v:95964]
+WARNING: [Synth 8-7071] port 'CLKFBOUTB' of module 'MMCME2_BASE' is unconnected for instance 'pixel_clk_mmcm' [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:41]
+WARNING: [Synth 8-7071] port 'CLKOUT0B' of module 'MMCME2_BASE' is unconnected for instance 'pixel_clk_mmcm' [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:41]
+WARNING: [Synth 8-7071] port 'CLKOUT1B' of module 'MMCME2_BASE' is unconnected for instance 'pixel_clk_mmcm' [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:41]
+WARNING: [Synth 8-7071] port 'CLKOUT2B' of module 'MMCME2_BASE' is unconnected for instance 'pixel_clk_mmcm' [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:41]
+WARNING: [Synth 8-7071] port 'CLKOUT3B' of module 'MMCME2_BASE' is unconnected for instance 'pixel_clk_mmcm' [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:41]
+WARNING: [Synth 8-7071] port 'CLKOUT4' of module 'MMCME2_BASE' is unconnected for instance 'pixel_clk_mmcm' [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:41]
+WARNING: [Synth 8-7071] port 'CLKOUT5' of module 'MMCME2_BASE' is unconnected for instance 'pixel_clk_mmcm' [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:41]
+WARNING: [Synth 8-7071] port 'CLKOUT6' of module 'MMCME2_BASE' is unconnected for instance 'pixel_clk_mmcm' [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:41]
+WARNING: [Synth 8-7023] instance 'pixel_clk_mmcm' of module 'MMCME2_BASE' has 18 connections declared, but only 10 given [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:41]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [D:/Programare/Vivado/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [D:/Programare/Vivado/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6157] synthesizing module 'PMEM_26bit' [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:556]
+INFO: [Synth 8-6155] done synthesizing module 'PMEM_26bit' (0#1) [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:556]
+INFO: [Synth 8-6157] synthesizing module 'CPU_17bit' [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:178]
+INFO: [Synth 8-251] R[0]=x, R[1]=x, R[2]=x, R[3]=x, R[4]=x, R[5]=x, R[6]=x, R[7]=x, addr_bus=xxxxx, data_out=xxxxxxxx
+ [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:219]
+INFO: [Synth 8-6155] done synthesizing module 'CPU_17bit' (0#1) [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:178]
+INFO: [Synth 8-6157] synthesizing module 'VRAM_DualPort' [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:774]
+INFO: [Synth 8-6155] done synthesizing module 'VRAM_DualPort' (0#1) [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:774]
+INFO: [Synth 8-6157] synthesizing module 'vga_sync_1440x900' [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:786]
+INFO: [Synth 8-6155] done synthesizing module 'vga_sync_1440x900' (0#1) [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:786]
+INFO: [Synth 8-6157] synthesizing module 'SevenSeg_Driver' [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:832]
+INFO: [Synth 8-226] default block is never used [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:844]
+INFO: [Synth 8-226] default block is never used [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:856]
+INFO: [Synth 8-6155] done synthesizing module 'SevenSeg_Driver' (0#1) [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:832]
+INFO: [Synth 8-6155] done synthesizing module 'Top_Game_NexysA7' (0#1) [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/sources_1/new/design.sv:14]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1405.922 ; gain = 660.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1405.922 ; gain = 660.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1405.922 ; gain = 660.047
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1405.922 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/constrs_1/new/pins.xdc]
+Finished Parsing XDC File [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/constrs_1/new/pins.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.srcs/constrs_1/new/pins.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Game_NexysA7_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_Game_NexysA7_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1483.227 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1483.227 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1483.227 ; gain = 737.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a50tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1483.227 ; gain = 737.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1483.227 ; gain = 737.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1483.227 ; gain = 737.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   17 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               17 Bit    Registers := 2     
+	               16 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 1     
++---Multipliers : 
+	              32x32  Multipliers := 1     
++---RAMs : 
+	             150K Bit	(76800 X 2 bit)          RAMs := 1     
++---Muxes : 
+	  11 Input   32 Bit        Muxes := 2     
+	   4 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 1     
+	   2 Input   26 Bit        Muxes := 1     
+	   2 Input   17 Bit        Muxes := 4     
+	   6 Input    4 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP alu_out0, operation Mode is: A*B.
+DSP Report: operator alu_out0 is absorbed into DSP alu_out0.
+DSP Report: operator alu_out0 is absorbed into DSP alu_out0.
+DSP Report: Generating DSP alu_out0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator alu_out0 is absorbed into DSP alu_out0.
+DSP Report: operator alu_out0 is absorbed into DSP alu_out0.
+DSP Report: Generating DSP alu_out0, operation Mode is: A*B.
+DSP Report: operator alu_out0 is absorbed into DSP alu_out0.
+DSP Report: operator alu_out0 is absorbed into DSP alu_out0.
+DSP Report: Generating DSP alu_out0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator alu_out0 is absorbed into DSP alu_out0.
+DSP Report: operator alu_out0 is absorbed into DSP alu_out0.
+DSP Report: Generating DSP vga_addr_vram, operation Mode is: C+A*(B:0x140).
+DSP Report: operator vga_addr_vram is absorbed into DSP vga_addr_vram.
+DSP Report: operator vga_addr_vram0 is absorbed into DSP vga_addr_vram.
+WARNING: [Synth 8-3332] Sequential element (vram/vram_reg_mux_sel_a_pos_1) is unused and will be removed from module Top_Game_NexysA7.
+WARNING: [Synth 8-3332] Sequential element (vram/vram_reg_mux_sel_a_pos_1__0) is unused and will be removed from module Top_Game_NexysA7.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1483.227 ; gain = 737.352
+---------------------------------------------------------------------------------
+ Sort Area is  alu_out0_0 : 0 0 : 3101 5879 : Used 1 time 0
+ Sort Area is  alu_out0_0 : 0 1 : 2778 5879 : Used 1 time 0
+ Sort Area is  alu_out0_3 : 0 0 : 2759 5418 : Used 1 time 0
+ Sort Area is  alu_out0_3 : 0 1 : 2659 5418 : Used 1 time 0
+ Sort Area is  vga_addr_vram_6 : 0 0 : 162 162 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|PMEM_26bit  | instr      | 256x26        | LUT            | 
++------------+------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping Report (see note below)
++-----------------+---------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name      | RTL Object    | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------+---------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Top_Game_NexysA7 | vram/vram_reg | 75 K x 2(READ_FIRST)   | W |   | 75 K x 2(WRITE_FIRST)  |   | R | Port A and B     | 0      | 6      | 
++-----------------+---------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-----------------+---------------+-----------+----------------------+--------------+
+|Module Name      | RTL Object    | Inference | Size (Depth x Width) | Primitives   | 
++-----------------+---------------+-----------+----------------------+--------------+
+|Top_Game_NexysA7 | core/regs_reg | Implied   | 32 x 32              | RAM32M x 16  | 
++-----------------+---------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name      | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|CPU_17bit        | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CPU_17bit        | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CPU_17bit        | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CPU_17bit        | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Top_Game_NexysA7 | C+A*(B:0x140)  | 10     | 9      | 10     | -      | 17     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1663.988 ; gain = 918.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1728.723 ; gain = 982.848
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-----------------+---------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name      | RTL Object    | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------+---------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Top_Game_NexysA7 | vram/vram_reg | 75 K x 2(READ_FIRST)   | W |   | 75 K x 2(WRITE_FIRST)  |   | R | Port A and B     | 0      | 6      | 
++-----------------+---------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++-----------------+---------------+-----------+----------------------+--------------+
+|Module Name      | RTL Object    | Inference | Size (Depth x Width) | Primitives   | 
++-----------------+---------------+-----------+----------------------+--------------+
+|Top_Game_NexysA7 | core/regs_reg | Implied   | 32 x 32              | RAM32M x 16  | 
++-----------------+---------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance vram/vram_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vram/vram_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vram/vram_reg_1_0__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance vram/vram_reg_1_1__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1728.723 ; gain = 982.848
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1940.863 ; gain = 1194.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1940.863 ; gain = 1194.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1940.863 ; gain = 1194.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1940.863 ; gain = 1194.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1941.824 ; gain = 1195.949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1941.824 ; gain = 1195.949
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name      | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Top_Game_NexysA7 | C'+A'*B      | 10     | 9      | 10     | -      | 17     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
+|CPU_17bit        | A*B          | 17     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CPU_17bit        | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CPU_17bit        | PCIN>>17+A*B | 17     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-----------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     2|
+|2     |CARRY4      |    34|
+|3     |DSP48E1     |     4|
+|5     |LUT1        |     6|
+|6     |LUT2        |   143|
+|7     |LUT3        |    21|
+|8     |LUT4        |    60|
+|9     |LUT5        |    87|
+|10    |LUT6        |   212|
+|11    |MMCME2_BASE |     1|
+|12    |RAM32M      |    16|
+|13    |RAMB36E1    |     6|
+|16    |FDRE        |   150|
+|17    |IBUF        |     5|
+|18    |OBUF        |    30|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1941.824 ; gain = 1195.949
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 1941.824 ; gain = 1118.645
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1941.824 ; gain = 1195.949
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1947.043 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 61 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1954.668 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 17 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 16 instances
+
+Synth Design complete | Checksum: e88deaa1
+INFO: [Common 17-83] Releasing license: Synthesis
+42 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 1954.668 ; gain = 1398.859
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1954.668 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.runs/synth_1/Top_Game_NexysA7.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file Top_Game_NexysA7_utilization_synth.rpt -pb Top_Game_NexysA7_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 17 00:29:56 2026...

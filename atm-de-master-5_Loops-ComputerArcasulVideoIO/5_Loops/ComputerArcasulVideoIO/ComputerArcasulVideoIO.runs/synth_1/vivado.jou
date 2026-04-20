@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Apr 17 00:29:02 2026
+# Process ID         : 30568
+# Current directory  : D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.runs/synth_1
+# Command line       : vivado.exe -log Top_Game_NexysA7.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Game_NexysA7.tcl
+# Log file           : D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.runs/synth_1/Top_Game_NexysA7.vds
+# Journal file       : D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.runs/synth_1\vivado.jou
+# Running On         : DESKTOP-9HCBKN4
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : AMD Ryzen 7 5800H with Radeon Graphics         
+# CPU Frequency      : 3194 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16558 MB
+# Swap memory        : 8826 MB
+# Total Virtual      : 25384 MB
+# Available Virtual  : 4476 MB
+#-----------------------------------------------------------
+source Top_Game_NexysA7.tcl -notrace

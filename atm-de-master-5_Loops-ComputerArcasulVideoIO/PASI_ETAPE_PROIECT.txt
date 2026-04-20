@@ -1,0 +1,116 @@
+PLAN DE LUCRU - PASII RAMASI PE ETAPE
+
+Context scurt:
+- In starea actuala, proiectul are infrastructura de baza functionala:
+  CPU, PMEM, VRAM dual-port, iesire VGA, 7-seg si citire butoane.
+- Programul activ din PMEM deseneaza doar arcasul si il muta sus/jos.
+- Logica de joc completa exista doar partial, in variante comentate.
+
+
+ETAPA 1 - DEMO VGA STABIL
+Scop:
+- Proiectul sa afiseze corect pe monitor un obiect care se misca si sa raspunda la butoane in mod predictibil.
+
+Pasi:
+1. Verificarea si corectarea modulului vga_sync_1440x900.
+2. Confirmarea faptului ca monitorul sincronizeaza stabil semnalele VGA_HS si VGA_VS.
+3. Verificarea faptului ca adresa VGA catre VRAM corespunde corect rezolutiei logice 360x225.
+4. Testarea desenarii si stergerii arcasului fara artefacte vizibile.
+5. Limitarea miscarii arcasului in interiorul ecranului.
+6. Curatarea codului de debug excesiv din CPU ($display) daca incurca simularea sau sinteza.
+7. Test pe placa: reset, afisare VGA, miscare cu BTNU/BTND.
+
+Livrabil final etapa 1:
+- Arcasul apare pe ecran si se misca stabil sus/jos fara erori evidente.
+
+
+ETAPA 2 - LOGICA DE JOC MINIMA
+Scop:
+- Jocul sa aiba obiectele principale si mecanica de baza: arcas, sageata, balon, scor.
+
+Pasi:
+1. Activarea sau rescrierea unei versiuni curate de PMEM pentru jocul complet.
+2. Adaugarea logicii pentru lansarea sagetii cu BTNC.
+3. Adaugarea logicii pentru miscarea sagetii pe ecran.
+4. Adaugarea logicii pentru balon:
+   pozitie initiala, miscare, respawn.
+5. Folosirea IO_RAND pentru o pozitie noua a balonului la respawn.
+6. Implementarea detectiei de coliziune sageata-balon.
+7. Cresterea scorului la coliziune.
+8. Afisarea scorului corect pe 7-seg, nu doar a valorii butoanelor.
+9. Stergerea corecta a obiectelor vechi inainte de redesenare.
+10. Verificarea faptului ca sageata nu ramane blocata si se reseteaza corect dupa hit sau iesire din ecran.
+
+Livrabil final etapa 2:
+- Jocul are un ciclu complet: misti arcasul, tragi, lovesti balonul, scorul creste.
+
+
+ETAPA 3 - SINCRONIZARE SI CALITATE VIZUALA
+Scop:
+- Afisarea sa fie mai curata, fara flicker sau tearing, iar actualizarile sa fie controlate.
+
+Pasi:
+1. Folosirea semnalului IO_VSYNC in programul CPU pentru actualizarea jocului pe frame.
+2. Separarea clara intre:
+   stergere obiecte, update logica, redesenare.
+3. Stabilirea unei viteze de joc constante raportate la frame-uri, nu doar la delay-uri brute.
+4. Verificarea faptului ca obiectele nu se suprascriu incorect in VRAM.
+5. Ajustarea dimensiunii si culorilor obiectelor pentru vizibilitate mai buna.
+6. Testarea mai multor scenarii:
+   miscare continua, foc repetat, balon respawn, scor multiplu.
+
+Livrabil final etapa 3:
+- Jocul ruleaza fluid si actualizarile vizuale sunt coerente de la un frame la altul.
+
+
+ETAPA 4 - TESTARE SI VALIDARE
+Scop:
+- Proiectul sa poata fi demonstrat si justificat tehnic.
+
+Pasi:
+1. Extinderea testbench-ului pentru CPU cu cazuri relevante pentru joc.
+2. Adaugarea unui test pentru VRAM_DualPort:
+   scriere CPU + citire VGA.
+3. Adaugarea unui test pentru vga_sync_1440x900:
+   HSYNC, VSYNC, video_on, x, y.
+4. Adaugarea unui test pentru top-level sau pentru fluxul complet de randare.
+5. Verificarea cazurilor limita:
+   arcas la marginea sus/jos, sageata iesita din ecran, balon la margini.
+6. Verificarea scorului si a resetului.
+7. Rulare de simulare pentru scenariile principale si salvarea dovezilor rezultate.
+
+Livrabil final etapa 4:
+- Exista teste si dovezi ca modulele principale functioneaza conform intentiei.
+
+
+ETAPA 5 - CURATENIE FINALA SI PREDARE
+Scop:
+- Proiectul sa fie usor de explicat, usor de rulat si prezentabil pentru predare.
+
+Pasi:
+1. Eliminarea variantelor vechi sau comentate de PMEM din design.sv.
+2. Pastrarea unei singure versiuni active, clara si bine organizata.
+3. Curatarea comentariilor temporare si a codului ramas din debug.
+4. Verificarea denumirilor de registre, semnale si constante.
+5. Actualizarea documentatiei proiectului:
+   arhitectura, flux VGA, VRAM, CPU, mecanica jocului.
+6. Adaugarea unei sectiuni "Cum rulezi proiectul" pentru Vivado.
+7. Adaugarea unei sectiuni "Limitari cunoscute" daca mai raman imperfectiuni.
+8. Test final pe placa inainte de predare.
+
+Livrabil final etapa 5:
+- Proiectul este curat, explicabil si pregatit pentru demonstratie sau predare.
+
+
+ORDINE RECOMANDATA DE LUCRU
+1. Etapa 1 - Demo VGA stabil
+2. Etapa 2 - Logica de joc minima
+3. Etapa 3 - Sincronizare si calitate vizuala
+4. Etapa 4 - Testare si validare
+5. Etapa 5 - Curatenie finala si predare
+
+
+REZULTATUL FINAL URMARIT
+- Un joc simplu pe VGA in care arcasul se misca, poate trage o sageata,
+  balonul apare si se misca, coliziunile cresc scorul, iar imaginea este
+  afisata stabil pe monitor.
