@@ -107,13 +107,13 @@ set rc [catch {
   create_msg_db write_bitstream.pb
   set_param general.usePosixSpawnForFork 1
   set_param chipscope.maxJobs 4
-  set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 12  }
   open_checkpoint Top_Game_NexysA7_routed.dcp
   set_property webtalk.parent_dir D:/Programare/SystemVerilog/atm-de-master-5_Loops-ComputerArcasulVideoIO/5_Loops/ComputerArcasulVideoIO/ComputerArcasulVideoIO.cache/wt [current_project]
 set_property TOP Top_Game_NexysA7 [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
+  set_property XPM_LIBRARIES XPM_CDC [current_project]
   catch { write_mem_info -force -no_partial_mmi Top_Game_NexysA7.mmi }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }

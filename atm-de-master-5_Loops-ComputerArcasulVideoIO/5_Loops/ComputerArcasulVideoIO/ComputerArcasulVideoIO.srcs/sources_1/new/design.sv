@@ -20,45 +20,15 @@ module Top_Game_NexysA7(
     output logic VGA_HS, VGA_VS  
 );
 
-    // --- 1. GENERARE CEAS PIXEL (25 MHz din 100 MHz) ---
-    wire clk_vga;
-    wire clk_vga_mmcm;
-    wire clkfb;
-    wire clkfb_buf;
-    wire clk_locked;
+    // --- 1. GENERARE CEAS (Utilizand IP-ul generat) ---
+    logic clk_vga;
+    logic clk_locked;
 
-    MMCME2_BASE #(
-        .BANDWIDTH("OPTIMIZED"),
-        .CLKIN1_PERIOD(10.0),
-        .DIVCLK_DIVIDE(1),
-        .CLKFBOUT_MULT_F(10.0),
-        .CLKOUT0_DIVIDE_F(40.0),
-        .CLKOUT0_PHASE(0.0),
-        .CLKOUT0_DUTY_CYCLE(0.5),
-        .CLKOUT1_DIVIDE(1),
-        .CLKOUT2_DIVIDE(1),
-        .CLKOUT3_DIVIDE(1)
-    ) pixel_clk_mmcm (
-        .CLKIN1(CLK100MHZ),
-        .RST(!CPU_RESETN),
-        .PWRDWN(1'b0),
-        .CLKFBIN(clkfb_buf),
-        .CLKFBOUT(clkfb),
-        .CLKOUT0(clk_vga_mmcm),
-        .CLKOUT1(),
-        .CLKOUT2(),
-        .CLKOUT3(),
-        .LOCKED(clk_locked)
-    );
-
-    BUFG clkfb_bufg (
-        .I(clkfb),
-        .O(clkfb_buf)
-    );
-
-    BUFG clk_vga_bufg (
-        .I(clk_vga_mmcm),
-        .O(clk_vga)
+    clk_wiz_0 pixel_clk_gen (
+        .clk_vga(clk_vga),
+        .reset(!CPU_RESETN),
+        .locked(clk_locked),
+        .clk_in1(CLK100MHZ)
     );
     
     logic [1:0] btnu_ff = 2'b0;
@@ -132,14 +102,14 @@ module Top_Game_NexysA7(
             vram_init_done <= 1'b0;
             vram_init_addr <= 17'd0;
         end else if (!vram_init_done) begin
-            if (vram_init_addr == 17'd76799)
+            if (vram_init_addr == 17'd80999)
                 vram_init_done <= 1'b1;
             else
                 vram_init_addr <= vram_init_addr + 17'd1;
         end
     end
 
-    assign vram_write_en   = !vram_init_done || (ram_we && (cpu_addr < 76800));
+    assign vram_write_en   = !vram_init_done || (ram_we && (cpu_addr < 81000));
     assign vram_write_addr = !vram_init_done ? vram_init_addr : cpu_addr;
     assign vram_write_data = !vram_init_done ? 2'b00 : cpu_data_to_ram[1:0];
 
@@ -156,7 +126,7 @@ module Top_Game_NexysA7(
         .video_on(video_on), .x(vga_x), .y(vga_y)
     );
 
-    assign vga_addr_vram = ((vga_y >> 1) * 320) + (vga_x >> 1);
+    assign vga_addr_vram = video_on ? ((vga_y >> 2) * 360) + (vga_x >> 2) : 17'd0;
 
     always_comb begin
         if (!video_on) {VGA_R, VGA_G, VGA_B} = `COLOR_BLACK;
@@ -563,14 +533,14 @@ module PMEM_26bit (input logic [16:0] addr, output logic [25:0] instr);
             3:   instr = {`LOADC, `REG_ARCHER_H,      17'd20};
             4:   instr = {`LOADC, `REG_ARCHER_COLOR,  17'd1};
             5:   instr = {`LOADC, `REG_CONST_1,       17'd1};
-            6:   instr = {`LOADC, `REG_SCR_WIDTH,     17'd320};
-            7:   instr = {`LOADC, `REG_OFFSET_LINE,   17'd300};
+            6:   instr = {`LOADC, `REG_SCR_WIDTH,     17'd360};
+            7:   instr = {`LOADC, `REG_OFFSET_LINE,   17'd340};
             8:   instr = {`LOADC, `REG_ADDR_BTNS,     `IO_BTNS};
             9:   instr = {`LOADC, `R23,               `IO_VSYNC};
             10:  instr = {`LOADC, `REG_ADDR_RAND,     `IO_RAND};
             11:  instr = {`LOADC, `REG_ADDR_SCORE,    `IO_SCORE};
             12:  instr = {`LOADC, `R28,               17'd0};
-            13:  instr = {`LOADC, `REG_LIMIT_Y,       17'd220};
+            13:  instr = {`LOADC, `REG_LIMIT_Y,       17'd205};
             14:  instr = {`LOADC, `R29,               17'd2};
             15:  instr = {`LOADC, `REG_SCORE_VAL,     17'd0};
             16:  instr = {`LOADC, `REG_ARROW_X,       17'd0};
@@ -660,7 +630,7 @@ module PMEM_26bit (input logic [16:0] addr, output logic [25:0] instr);
             // --- MOVE ARROW ---
             92:  instr = {`JZ,    `REG_ARROW_X, 17'd99};
             93:  instr = {`ADD,   `REG_ARROW_X, `REG_ARROW_X, `R29, `DUMMY7b};
-            94:  instr = {`LOADC, `R24, 17'd318};
+            94:  instr = {`LOADC, `R24, 17'd358};
             95:  instr = {`SUB,   `R30, `REG_ARROW_X, `R24, `DUMMY7b};
             96:  instr = {`JZ,    `R30, 17'd98};
             97:  instr = {`JUMP,  `REG_RZERO, 17'd99};
@@ -676,7 +646,7 @@ module PMEM_26bit (input logic [16:0] addr, output logic [25:0] instr);
             105: instr = {`ADD,   `REG_BALLOON_X, `REG_BALLOON_X, `R24, `DUMMY7b};
             106: instr = {`LOADC, `REG_BALLOON_Y, 17'd0};
             107: instr = {`ADD,   `REG_BALLOON_Y, `REG_BALLOON_Y, `REG_CONST_1, `DUMMY7b};
-            108: instr = {`LOADC, `R24, 17'd232};
+            108: instr = {`LOADC, `R24, 17'd217};
             109: instr = {`SUB,   `R30, `REG_BALLOON_Y, `R24, `DUMMY7b};
             110: instr = {`JZ,    `R30, 17'd145};
 
@@ -775,7 +745,7 @@ module VRAM_DualPort(
     input logic clk, we_cpu, [16:0] addr_cpu, [16:0] addr_vga,
     input logic [1:0] din_cpu, output logic [1:0] dout_vga
 );
-    (* ram_style = "block" *) logic [1:0] vram [0:76799];
+    (* ram_style = "block" *) logic [1:0] vram [0:80999];
 
     always_ff @(posedge clk) begin
         if (we_cpu) vram[addr_cpu] <= din_cpu;
@@ -786,16 +756,16 @@ endmodule
 module vga_sync_1440x900(
     input logic clk, input rst, 
     output logic hsync, vsync, video_on, [10:0] x, y);
-    localparam int H_ACTIVE = 640;
-    localparam int H_FRONT  = 16;
-    localparam int H_SYNC   = 96;
-    localparam int H_BACK   = 48;
+    localparam int H_ACTIVE = 1440;
+    localparam int H_FRONT  = 80;
+    localparam int H_SYNC   = 152;
+    localparam int H_BACK   = 232;
     localparam int H_TOTAL  = H_ACTIVE + H_FRONT + H_SYNC + H_BACK;
 
-    localparam int V_ACTIVE = 480;
-    localparam int V_FRONT  = 10;
-    localparam int V_SYNC   = 2;
-    localparam int V_BACK   = 33;
+    localparam int V_ACTIVE = 900;
+    localparam int V_FRONT  = 3;
+    localparam int V_SYNC   = 6;
+    localparam int V_BACK   = 25;
     localparam int V_TOTAL  = V_ACTIVE + V_FRONT + V_SYNC + V_BACK;
 
     logic [10:0] h_cnt = 0, v_cnt = 0;
@@ -820,7 +790,7 @@ module vga_sync_1440x900(
     
     assign hsync = ~((h_cnt >= H_ACTIVE + H_FRONT) &&
                      (h_cnt <  H_ACTIVE + H_FRONT + H_SYNC));
-    assign vsync = ~((v_cnt >= V_ACTIVE + V_FRONT) &&
+    assign vsync =  ((v_cnt >= V_ACTIVE + V_FRONT) &&
                      (v_cnt <  V_ACTIVE + V_FRONT + V_SYNC));
 
     assign video_on = (h_cnt < H_ACTIVE) && (v_cnt < V_ACTIVE);

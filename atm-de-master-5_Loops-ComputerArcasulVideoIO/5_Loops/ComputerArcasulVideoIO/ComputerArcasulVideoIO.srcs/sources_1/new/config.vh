@@ -7,10 +7,10 @@
 `define ARCHER_HEIGHT   17'd20
 `define ARCHER_COLOR    `COLOR_BLUE
 
-`define SCREEN_WIDTH   17'd320
-`define SCREEN_OFFSET_LINE 17'd300
+`define SCREEN_WIDTH   17'd360
+`define SCREEN_OFFSET_LINE 17'd340
 
-`define SCREEN_HEIGHT  17'd240
+`define SCREEN_HEIGHT  17'd225
 
 
 // =========================================================

@@ -1,0 +1,20 @@
++====================+===================+====================================+
+| Launch Setup Clock | Launch Hold Clock | Pin                                |
++====================+===================+====================================+
+| clk_vga_clk_wiz_0  | clk_vga_clk_wiz_0 | core/regs_reg_0_31_10_11/RAMA_D1/I |
+| clk_vga_clk_wiz_0  | clk_vga_clk_wiz_0 | core/regs_reg_0_31_10_11/RAMC_D1/I |
+| clk_vga_clk_wiz_0  | clk_vga_clk_wiz_0 | core/regs_reg_0_31_10_11/RAMD_D1/I |
+| clk_vga_clk_wiz_0  | clk_vga_clk_wiz_0 | core/alu_out_reg[11]/D             |
+| clk_vga_clk_wiz_0  | clk_vga_clk_wiz_0 | core/alu_out_reg[6]/D              |
+| clk_vga_clk_wiz_0  | clk_vga_clk_wiz_0 | core/alu_out_reg[14]/D             |
+| clk_vga_clk_wiz_0  | clk_vga_clk_wiz_0 | core/alu_out_reg[5]/D              |
+| clk_vga_clk_wiz_0  | clk_vga_clk_wiz_0 | core/alu_out_reg[4]/D              |
+| clk_vga_clk_wiz_0  | clk_vga_clk_wiz_0 | core/alu_out_reg[12]/D             |
+| clk_vga_clk_wiz_0  | clk_vga_clk_wiz_0 | core/alu_out_reg[9]/D              |
+| clk_vga_clk_wiz_0  | clk_vga_clk_wiz_0 | core/alu_out_reg[13]/D             |
+| clk_vga_clk_wiz_0  | clk_vga_clk_wiz_0 | core/regs_reg_0_31_2_3/RAMD_D1/I   |
+| clk_vga_clk_wiz_0  | clk_vga_clk_wiz_0 | core/alu_out_reg[2]/D              |
+| clk_vga_clk_wiz_0  | clk_vga_clk_wiz_0 | core/alu_out_reg[10]/D             |
+| clk_vga_clk_wiz_0  | clk_vga_clk_wiz_0 | core/alu_out_reg[1]/D              |
+| clk_vga_clk_wiz_0  | clk_vga_clk_wiz_0 | core/alu_out_reg[15]/D             |
++--------------------+-------------------+------------------------------------+
